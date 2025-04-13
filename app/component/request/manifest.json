@@ -97,13 +97,6 @@
       },
       "routes": [
         {
-          "name": "home",
-          "pattern": "",
-          "target": [
-            "home"
-          ]
-        },
-        {
           "name": "Request",
           "pattern": "",
           "target": [
@@ -126,13 +119,6 @@
         }
       ],
       "targets": {
-        "home": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "home",
-          "viewName": "home"
-        },
         "Request": {
           "viewType": "XML",
           "transition": "slide",

@@ -97,46 +97,20 @@
       },
       "routes": [
         {
-          "name": "Request",
+          "name": "home",
           "pattern": "",
           "target": [
-            "Request"
-          ]
-        },
-        {
-          "name": "CreateOrder",
-          "pattern": "CreateOrder/{num}",
-          "target": [
-            "CreateOrder"
-          ]
-        },
-        {
-          "name": "OrderDetail",
-          "pattern": "OrderDetail/{num}",
-          "target": [
-            "OrderDetail"
+            "home"
           ]
         }
       ],
       "targets": {
-        "Request": {
+        "home": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Request",
-          "viewName": "Request"
-        },
-        "CreateOrder": {
-          "viewType": "XML",
-          "transition": "slide",
-          "viewId": "CreateOrder",
-          "viewName": "CreateOrder"
-        },
-        "OrderDetail": {
-          "viewType": "XML",
-          "transition": "slide",
-          "viewId": "OrderDetail",
-          "viewName": "OrderDetail"
+          "viewId": "home",
+          "viewName": "home"
         }
       }
     },
