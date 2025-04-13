@@ -34,6 +34,28 @@ sap.ui.define([
          this.getView().byId("TableName").setText(TableIndex);
       },
 
+      onDeleteOrder: async function () {
+         let model = this.getView().getModel("RequestModel");
+         let i;
+         for (i = 0; i < totalNumber; i++) {
+            let chk = '/' + i + '/CHK'
+            if (model.getProperty(chk) === true) {
+               let key = '/' + i + '/request_number'
+               let request_number = model.getProperty(key);
+               await this.onDelete(request_number);
+            }
+         }
+         this.onDataView();
+      },
+      onDelete: async function (key) {
+         let url = "/odata/v4/request/Request/" + key;
+         await fetch(url, {
+            method: "DELETE",
+            headers: {
+               "Content-Type": "application/json;IEEE754Compatible=true"
+            }
+         })
+      },
 
       onSearch: function () {
          let ReqNum = this.byId("ReqNum").getValue();

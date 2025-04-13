@@ -91,7 +91,13 @@
                         <Button
                             text="물품 요청 생성"
                             press="onCreateOrder"
-                            type="Transparent" />                        
+                            type="Transparent" />    
+                        <Button
+                            icon="sap-icon://delete"
+                            tooltip="삭제"
+                            press="onDeleteOrder"
+                            type="Transparent" /> 
+                    
                         <Button
                             icon="sap-icon://sort"
                             tooltip="정렬"
