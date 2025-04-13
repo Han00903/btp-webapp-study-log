@@ -36,7 +36,7 @@
                     </f:header>
                     <f:content>
                         <List showSeparators="None" items="{
-                            path: 'RequestModel>/'
+                            path: 'RequestModel>/value'
                         }">
                             <CustomListItem>
                                 <HBox alignItems="Center" justifyContent="SpaceBetween">
