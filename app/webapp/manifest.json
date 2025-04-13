@@ -50,14 +50,6 @@
         "sap.ui.core": {}
       }
     },
-    "componentUsages": {
-      "requestComponent": {
-        "name": "project1.component.request",
-        "settings": {},
-        "componentData": {},
-        "lazy": true
-      }
-    },
     "contentDensities": {
       "compact": true,
       "cozy": true
@@ -94,42 +86,57 @@
     "routing": {
       "config": {
         "routerClass": "sap.m.routing.Router",
-        "viewType": "XML",
-        "async": true,
-        "viewPath": "project1.view",
         "controlAggregation": "pages",
         "controlId": "app",
-        "clearControlAggregation": false
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "project1.view",
+        "async": true,
+        "viewPath": "project1.view"
       },
       "routes": [
         {
-          "name": "Request_home",
+          "name": "Request",
           "pattern": "",
           "target": [
-            "Request_home"
+            "Request"
           ]
         },
         {
-          "name": "request",
-          "pattern": "request",
-          "target": {
-            "name": "request",
-            "prefix": "re"
-          }
+          "name": "CreateOrder",
+          "pattern": "CreateOrder/{num}",
+          "target": [
+            "CreateOrder"
+          ]
+        },
+        {
+          "name": "OrderDetail",
+          "pattern": "OrderDetail/{num}",
+          "target": [
+            "OrderDetail"
+          ]
         }
       ],
       "targets": {
-        "Request_home": {
+        "Request": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Request_home",
-          "viewName": "Request_home"
+          "viewId": "Request",
+          "viewName": "Request"
         },
-        "request": {
-          "type": "Component",
-          "usage": "requestComponent",
-          "title": "Request"
+        "CreateOrder": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewId": "CreateOrder",
+          "viewName": "CreateOrder"
+        },
+        "OrderDetail": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewId": "OrderDetail",
+          "viewName": "OrderDetail"
         }
       }
     },
