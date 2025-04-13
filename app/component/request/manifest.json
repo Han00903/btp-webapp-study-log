@@ -50,6 +50,14 @@
         "sap.ui.core": {}
       }
     },
+    "componentUsages": {
+      "requestComponent": {
+        "name": "project1.component.request",
+        "settings": {},
+        "componentData": {},
+        "lazy": true
+      }
+    },
     "contentDensities": {
       "compact": true,
       "cozy": true
@@ -84,48 +92,52 @@
       ]
     },
     "routing": {
-            "config": {
-                "routerClass": "sap.m.routing.Router",
-                "viewType": "XML",
-                "async": true,
-                "viewPath": "project1.view",
-                "controlAggregation": "pages",
-                "controlId": "app",
-                "clearControlAggregation": false
-            
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "project1.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
       },
-            "routes": [
-                {
-                    "name": "home",
-                    "pattern": "",
-                    "target": [
-                        "home"
-                    
+      "routes": [
+        {
+          "name": "Request_home",
+          "pattern": "",
+          "target": [
+            "Request_home"
           ]
-                
+        },
+        {
+          "name": "request",
+          "pattern": "request",
+          "target": {
+            "name": "request",
+            "prefix": "re"
+          }
         }
-            
       ],
       "targets": {
-                "home" : {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
-                    "viewId": "home",
-                    "viewName": "home"
-                
+        "Request_home": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Request_home",
+          "viewName": "Request_home"
+        },
+        "request": {
+          "type": "Component",
+          "usage": "requestComponent",
+          "title": "Request"
         }
-            
       }
-        
     },
-        "rootView": {
-            "viewName": "project1.view.app",
-            "type": "XML",
-            "async": true,
-            "id": "appView"
-        
+    "rootView": {
+      "viewName": "project1.view.app",
+      "type": "XML",
+      "async": true,
+      "id": "appView"
     }
-    
   }
 }
