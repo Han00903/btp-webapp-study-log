@@ -35,7 +35,7 @@ sap.ui.define([
             let temp = new JSONModel(this.temp).oData;
             temp.request_number = parseInt(this.byId("ReqNum").getText());
             temp.request_state = "A";
-            let url = "/request/Request/" + temp.request_number;
+            let url = "/odata/v4/request/Request/" + temp.request_number;
             await this.onUpdate(url, temp);
         },
         onUpdate: async function (url, data) {
@@ -72,7 +72,7 @@ sap.ui.define([
             temp.request_number = parseInt(this.byId("ReqNum").getText());
             temp.request_state = "C";
             temp.request_reject_reason = this.getView().byId("RejectReason").getValue();
-            let url = "/request/Request/" + temp.request_number;
+            let url = "/odata/v4/request/Request/" + temp.request_number;
             await this.onUpdate(url, temp);
         },
         onCancelRejectReason: function () {
