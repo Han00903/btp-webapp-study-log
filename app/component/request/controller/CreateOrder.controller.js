@@ -2,9 +2,9 @@ sap.ui.define([
   "sap/ui/core/mvc/Controller",
   "sap/ui/model/json/JSONModel"
 ], function (Controller, JSONModel) {
-  "use strict";
+  "use strict";
   let Today, CreateNum;
-  return Controller.extend("project1.controller.CreateOrder", {
+  return Controller.extend("project1.component.request.controller.CreateOrder", {
     onInit: function () {
       const myRoute = this.getOwnerComponent().getRouter().getRoute("CreateOrder");
       myRoute.attachPatternMatched(this.onMyRoutePatternMatched, this);

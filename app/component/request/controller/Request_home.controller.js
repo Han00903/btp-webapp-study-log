@@ -3,5 +3,8 @@ sap.ui.define([
 ], function (Controller) {
     "use strict";
     return Controller.extend("project1.component.request.controller.Request_home", {
+        onRequest_list: function () {
+            this.getOwnerComponent().getRouter().navTo("Request");
+        }
     });
 });

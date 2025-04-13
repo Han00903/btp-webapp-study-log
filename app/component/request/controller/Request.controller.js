@@ -10,7 +10,7 @@ sap.ui.define([
    "use strict";
 
    let totalNumber;
-   return Controller.extend("project1.controller.Request", {
+   return Controller.extend("project1.component.request.controller.Request", {
 
       formatter: formatter,
 
@@ -82,7 +82,7 @@ sap.ui.define([
          if (!this.byId("SortDialog")) {
             Fragment.load({
                id: this.getView().getId(),
-               name: "project1.view.fragment.SortDialog",
+               name: "project1.component.request.view.fragment.SortDialog",
                controller: this
             }).then(function (oDialog) {
                this.getView().addDependent(oDialog);
@@ -143,7 +143,7 @@ sap.ui.define([
          if (!this.nameDialog) {
             this.nameDialog = sap.ui.core.Fragment.load({
                id: oView.getId(),
-               name: "project1.view.fragment.ShowRejectDialog",
+               name: "project1.component.request.view.fragment.ShowRejectDialog",
                controller: this
             }).then(function (oDialog) {
                oView.addDependent(oDialog);
@@ -165,6 +165,10 @@ sap.ui.define([
          let SelectedNum = oEvent.getParameters().row.mAggregations.cells[1].mProperties.text;
          this.getOwnerComponent().getRouter().navTo("OrderDetail", { num: SelectedNum });
          console.log(SelectedNum);
+      },
+      onRequesthome: function () {
+         this.getOwnerComponent().getRouter().navTo("Request_home");
       }
+
    });
 });

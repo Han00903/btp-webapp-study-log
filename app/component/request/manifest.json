@@ -103,21 +103,21 @@
         },
         {
           "name": "Request",
-          "pattern": "",
+          "pattern": "Request",
           "target": [
             "Request"
           ]
         },
         {
           "name": "CreateOrder",
-          "pattern": "CreateOrder/{num}",
+          "pattern": "Request/CreateOrder/{num}",
           "target": [
             "CreateOrder"
           ]
         },
         {
           "name": "OrderDetail",
-          "pattern": "OrderDetail/{num}",
+          "pattern": "Request/OrderDetail/{num}",
           "target": [
             "OrderDetail"
           ]
