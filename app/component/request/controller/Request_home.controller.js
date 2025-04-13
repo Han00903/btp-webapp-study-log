@@ -23,6 +23,10 @@ sap.ui.define([
 
         onRequest_list: function () {
             this.getOwnerComponent().getRouter().navTo("Request");
+        },
+        onRequest_chart: function (oEvent) {
+            this.getOwnerComponent().getRouter().navTo("Request_chart");
         }
+
     });
 });
