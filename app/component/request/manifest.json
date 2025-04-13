@@ -84,67 +84,48 @@
       ]
     },
     "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "controlAggregation": "pages",
-        "controlId": "app",
-        "transition": "slide",
-        "type": "View",
-        "viewType": "XML",
-        "path": "project1.view",
-        "async": true,
-        "viewPath": "project1.view"
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "project1.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            
       },
-      "routes": [
-        {
-          "name": "Request",
-          "pattern": "",
-          "target": [
-            "Request"
+            "routes": [
+                {
+                    "name": "home",
+                    "pattern": "",
+                    "target": [
+                        "home"
+                    
           ]
-        },
-        {
-          "name": "CreateOrder",
-          "pattern": "CreateOrder/{num}",
-          "target": [
-            "CreateOrder"
-          ]
-        },
-        {
-          "name": "OrderDetail",
-          "pattern": "OrderDetail/{num}",
-          "target": [
-            "OrderDetail"
-          ]
+                
         }
+            
       ],
       "targets": {
-        "Request": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "Request",
-          "viewName": "Request"
-        },
-        "CreateOrder": {
-          "viewType": "XML",
-          "transition": "slide",
-          "viewId": "CreateOrder",
-          "viewName": "CreateOrder"
-        },
-        "OrderDetail": {
-          "viewType": "XML",
-          "transition": "slide",
-          "viewId": "OrderDetail",
-          "viewName": "OrderDetail"
+                "home" : {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "home",
+                    "viewName": "home"
+                
         }
+            
       }
+        
     },
-    "rootView": {
-      "viewName": "project1.view.app",
-      "type": "XML",
-      "async": true,
-      "id": "appView"
+        "rootView": {
+            "viewName": "project1.view.app",
+            "type": "XML",
+            "async": true,
+            "id": "appView"
+        
     }
+    
   }
 }
