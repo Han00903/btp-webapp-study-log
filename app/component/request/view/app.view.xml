@@ -1,7 +1,7 @@
-<mvc:View
-    controllerName="project1.controller.app"
-    xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-    <App class="myAppDemoWT" id="app">
-    </App>
+<mvc:View 
+    controllerName="project1.component.request.controller.app"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m">
+            <App class="myAppDemoWT" id="app">
+            </App>
 </mvc:View>

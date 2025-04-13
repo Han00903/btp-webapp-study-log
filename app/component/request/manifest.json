@@ -1,7 +1,7 @@
 {
   "_version": "1.65.0",
   "sap.app": {
-    "id": "project1",
+    "id": "project1.request",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -58,7 +58,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "project1.i18n.i18n"
+          "bundleName": "project1.component.request.i18n.i18n"
         }
       },
       "": {
@@ -85,17 +85,22 @@
     },
     "routing": {
       "config": {
-        "routerClass": "sap.m.routing.Router",
+        "routerClass": "sap.f.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "project1.component.request.view",
         "controlAggregation": "pages",
         "controlId": "app",
-        "transition": "slide",
-        "type": "View",
-        "viewType": "XML",
-        "path": "project1.view",
-        "async": true,
-        "viewPath": "project1.view"
+        "clearControlAggregation": false
       },
       "routes": [
+        {
+          "name": "Request_home",
+          "pattern": "",
+          "target": [
+            "Request_home"
+          ]
+        },
         {
           "name": "Request",
           "pattern": "",
@@ -119,6 +124,13 @@
         }
       ],
       "targets": {
+        "Request_home": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Request_home",
+          "viewName": "Request_home"
+        },
         "Request": {
           "viewType": "XML",
           "transition": "slide",
@@ -141,7 +153,7 @@
       }
     },
     "rootView": {
-      "viewName": "project1.view.app",
+      "viewName": "project1.component.request.view.app",
       "type": "XML",
       "async": true,
       "id": "appView"
