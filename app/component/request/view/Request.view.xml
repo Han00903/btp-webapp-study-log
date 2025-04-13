@@ -87,7 +87,6 @@
                 rowActionCount="1"
                 width="auto">
 
-
                 <t:extension>
                     <OverflowToolbar>
                         <Title id="TableName" text="물품 요청 목록"/>
@@ -106,6 +105,11 @@
                             icon="sap-icon://sort"
                             tooltip="정렬"
                             press="onSort"
+                            type="Transparent" />
+                        <Button 
+                            icon="sap-icon://excel-attachment" 
+                            tooltip="Excel Download"
+                            press=".onDataExport"
                             type="Transparent" />
                     </OverflowToolbar>
                 </t:extension>

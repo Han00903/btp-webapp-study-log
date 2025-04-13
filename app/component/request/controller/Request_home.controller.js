@@ -17,7 +17,7 @@ sap.ui.define([
                 type: "get",
                 url: "/odata/v4/request/Request?$orderby=request_date desc&$filter=request_state eq 'B'&$top=3"
             });
-            let RequestModel = new JSONModel(Request.value);
+            let RequestModel = new JSONModel(Request);
             this.getView().setModel(RequestModel, "RequestModel");
         },
 
